@@ -1,0 +1,21 @@
+Hi!
+
+No, I did not mistakenly misspell the name of this txt file.
+Reamde is just a reference to a book written by one of my favorite novelists, "Neal Stephenson".
+
+"Neal Town Stephenson (born October 31, 1959) is an American writer known for his works of speculative fiction.
+His novels have been categorized as science fiction, historical fiction, cyberpunk, postcyberpunk, and baroque.
+Stephenson's work explores mathematics, cryptography, linguistics, philosophy, currency, and the history of science.
+He also writes non-fiction articles about technology in publications such as Wired.
+He has written novels with his uncle, George Jewsbury ("J. Frederick George"), under the collective pseudonym Stephen Bury.
+Stephenson has worked part-time as an advisor for Blue Origin, a company (founded by Jeff Bezos) developing a spacecraft and a space launch system,[1] and is also a cofounder of Subutai Corporation, whose first offering is the interactive fiction project The Mongoliad.
+He was Magic Leap's Chief Futurist from 2014 to 2020.[2]" - https://en.wikipedia.org/wiki/Neal_Stephenson
+
+Anyway, this is my first attempt at learning any sort of programming(HTML,CSS, a sprinkle of JS).
+So, for my first project, I decided to work on a webpage for a friend who I encouraged to start streaming on Twitch.
+It's basically just starting out as a static HTML link page, but we'll see where it goes.
+I took a CSS reference sheet from w3-schools (https://www.w3schools.com/w3css/4/w3.css) and began to build on top of it, occasionally modifying or creating my own CSS within the HTML <head> without modifying the .css stylesheet (I'm a noob, give me a break).
+I've learned a lot from this basic project, and I've also learned that I absolutely love programming.
+I'll be putting this in a Github repository and this static page is being hosted @ https://babykins3000.pages.dev.
+
+-Travis L. Hodges 9/4/2023 2:40 PM CST

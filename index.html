@@ -1,0 +1,541 @@
+
+<!-- Created by Travis Hodges aka Squirrel_Master !-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Above is for the Font Awesome Icons !-->
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Syne"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet"> 
+    <!-- Above css is>  font-family: 'Raleway', sans-serif; font-family: 'Sedgwick Ave Display' !-->
+    
+    
+
+    <script src="https://kit.fontawesome.com/db7787d106.js" crossorigin="anonymous"></script>
+    <!-- Above is for the beat-fade effect of the icons on the page -Trav !-->
+
+    <title>Babykins3000</title>
+
+    <!--I need to go in and update the modified .CSS file(let me make it, lol)-->
+    <style>
+body {
+  background-image: url("Babykins_Original_Image.jpg");
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: cover;
+  font-family: "Syne", sans-serif;
+  position: relative;
+}
+
+/* this is for the semi-transparent black overlay */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%; /* Adjust the left position to center it */
+  transform: translateX(-50%); /* Center horizontally using transform */
+  width: 50%; /* Adjust the width to % of the viewport */
+  height: 100%; /* Cover the entire height of the viewport */
+  background-color: rgba(0, 0, 0, 0.426); /*  */
+  z-index: -1;
+}
+
+      footer {
+        background-color: #000000;
+        text-align: center;
+        width: 100%;
+        height: fit-content;
+        max-height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgba(255, 204, 217) !important;
+        background-color: rgb(0 0 0 / 83%) !important;
+        }
+
+      .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .image-container {
+        text-align: center;
+        width: 100%; 
+        position: relative;
+      }
+
+      .links-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        min-width: 100%;
+        }
+
+      .link {
+        min-width: 50% !important;
+      }
+
+      .icon-row.i {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        justify-content: center; /* to center the row -trav*/
+        margin-top: 20px; /* Add some space between paragraph and icons -trav */
+      }
+
+      .video-container {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%; /* 16:9 aspect ratio (height / width) */
+        }
+
+      #twitch-embed-container {
+       position: relative;
+       overflow: hidden;
+        padding-top: 56.25%; /* 16:9 aspect ratio */
+       }
+
+       #twitch-embed {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    
+      }  
+
+      .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .responsive-frame {
+        position: relative;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      } 
+      
+      @media (max-width: 768px) {
+     /* Adjust the max-width breakpoint as needed */
+     #twitch-embed-container {
+      padding-top: 100%; /* Square aspect ratio for mobile */
+      width: 100%;
+      }
+    }
+
+      @media (max-width: 1000px) {
+        body::before {
+          display: none;
+        }
+      }
+
+     
+      @keyframes mymove {
+      from {bottom: 300px;}
+      to {bottom: 0px} 
+      } 
+
+      @keyframes fontchange {
+      5%   {top: 0px; left: 0px; color: #FF0099;}
+      25%  {top: 0px; left: 0px; color: blue;}
+      50%  {top: 0px; left: 0px; color: purple;}
+      75%  {top: 0px; left: 0px; color: red;}
+      100% {top: 0px; left: 0px; color: green;}
+      }
+
+      @media (min-width: 1200px) {
+        .container {
+          max-width: 1140px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .container {
+          max-width: 960px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          max-width: 100%;
+        }
+
+        .link {
+          width: 100%;
+        }
+      }
+
+      @media (min-width: 576px) {
+        .container {
+          max-width: 520px;
+        } 
+      }
+
+       .w3-yellow,
+      .w3-hover-purple:hover, 
+      .w3-text-black {
+         color: rgb(255, 150, 213)!important; /* Change the color on hover */
+         background-color: rgb(0 0 0 / 83%) !important;
+         font-size: 25px !important; 
+      }
+
+      /* Center the text within the buttons */
+      .link {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  text-decoration: none; /* Remove underline from links */
+  justify-content: center;
+  color: #FF96D5; /* Initial text color */
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 18px;
+  background-color: #FFFFFF;
+  border: 2px solid #FF96D5;
+}
+
+.link:hover {
+  transform: scale(1.07);
+  box-shadow: 2px 2px 12px rgba(255, 155, 242, 0.432);
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+/* for the icons in the button-links container -Trav */
+.link i {
+  margin-right: 10px;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+/* Icon color on hover in the button-links container */
+.link:hover i {
+  color: #000000; 
+}
+
+/* Style the button text for the button-links row -Trav */
+.button-text {
+  margin-right: 0px; /* Adjust the margin between the icon and text, currently set-up inline */
+}
+
+/* Footer- Define styles for the icons and their hover effects - trav */
+.icon-link {
+  color: #ffffff;
+  display: inline-block;
+  margin-right: 20px;
+  transition: transform 0.3s; /* Add a smooth transition effect */
+  font-size: 3rem;
+}
+
+/* Apply the scale effect on hover- found in the footer */
+.icon-link:hover {
+  transform: scale(1.2); /* Adjust the scale factor as needed (1.2 means 120%) */
+  color: rgb(255, 150, 213); /* Change the color on hover */
+}
+
+/* Media query for screens with a view width of 568px or less */
+@media screen and (max-width: 568px) {
+    .icon-link i {
+      font-size: 2rem; /* Change the font size to fa-2x for smaller screens */
+      margin-right: -10px;
+    }
+  }
+      
+      p {
+      font-size: 18px;
+      }
+      
+      @media screen and (max-width: 612px) {
+        p {
+          font-size: 14px;
+        }
+      }
+
+      h1 h2 h3 h4 h5 h6 {
+      color: rgb(255, 150, 213);}
+
+    </style>
+  </head>
+
+<div class="container">
+  <body class="w3-white">
+    
+      <!-- top image. -->
+      <div class="image-container">
+        <div class="image-container" style="animation: mymove 5s">
+          
+    <img
+        src="./perfect.jpg"
+        class="w3-margin"
+        alt="Babykins3000"
+        style="border-radius: 50%; max-width: 90%; height: 100%; display: flex; justify-content: center;"
+        animation="mymove 5s"
+/>
+</div>
+</div>
+        
+
+        <!-- Content. Add bio. -trav -->
+        <div class="container" style= "background-color: rgba(0, 0, 0, 0.8); width: 100%; height: 100%; border: none; border-radius: 10px; line-height: 1.8em;">
+           <h1 style="text-align: center; animation: fontchange 7s infinite; font-size: 55px; display: flex; 
+           flex-direction: column; font-family: 'Raleway', sans-serif; text-align: wrap; font-family: 'Sedgwick Ave Display', cursive;
+            padding-top: 20px; font-size: min(65px, max(35px, calc(2.5em + 2.4vw)))!important;">
+            <strong>BABYKINS3000</strong></h1>
+          <p style="color: #FF96D5; text-align: center; font-size: 22px; font-family: 'Raleway', sans-serif; text-align: wrap; font-family: 'Sedgwick Ave Display', cursive;"><strong>"My lipgloss be poppin', my lipgloss be kewwwwwwl"</strong></p> 
+          </div>
+          </div><!-- Add Bio here if u want !-->
+
+    
+    <div id="twitch-embed-container">
+    <div id="twitch-embed" style="padding-bottom: 0px; ">
+
+
+  <!-- Load the Twitch embed JavaScript file -->
+  <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+  <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+  <script type="text/javascript">
+    new Twitch.Embed("twitch-embed", {
+      width: "80%", // Set width to 100%
+      height: "80%", // Set height to 100%
+      channel: "babykins3000",
+      // Only needed if this page is going to be embedded on other websites
+      parent: ["embed.example.com", "othersite.example.com"]
+    });
+  </script>
+    </div>
+    </div>
+
+<div class="Container">
+  <div class="links-container">
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Chr_6XgrcJ8/?utm_source=ig_embed&amp;utm_campaign=loading" 
+      data-instgrm-version="14" style="background: #000000; border: 0; border-radius: 3px; box-shadow: 0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width: 540px; min-width: 326px; padding: 0; width: 99.375%; width: -webkit-calc(100% - 2px); width: calc(100% - 2px);">
+      <!-- ... rest of the code ... -->
+    </blockquote>
+    <script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+      
+
+        <!-- Links section 1 -trav -->
+      <div class="container" style="width: 100%; height:100%">
+        <h1 style="text-align: center; color: rgb(255, 255, 255); line-height: 1.1em; font-size: 32px; display: flex; 
+        flex-direction: column; font-family: 'Raleway', sans-serif; text-align: wrap; font-family: 'Sedgwick Ave Display', cursive; 
+        font-size: min(48px, max(35px, calc(2.5em + 2.4vw)))!important;">Check out my Playlist!</h1>
+
+        <iframe style="border-radius: 10px;" src="https://open.spotify.com/embed/playlist/3HWYnoS5sMPiGAi9wH6lna?utm_source=generator&theme=0" 
+        width="100%" height="220px" frameBorder="0" allowfullscreen="yes" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy" autoplay></iframe>
+        </div>
+        <div class="container">
+          <div class="links-container">
+            <a href="https://www.twitch.tv/babykins3000" class="w3-button w3-hover-pink w3-large w3-round-xlarge w3-yellow link" style="text-align: center; color: #FF96D5;" target="_blank">
+              <i class="fab fa-beat-fade fa-twitch" style="color: #ffffff; margin-right: 25px"></i><span class="button-text"> Twitch</span>
+            </a>
+        
+            <a href="https://www.instagram.com/babykins3000/" class="w3-button w3-hover-pink w3-large w3-round-xlarge w3-yellow link" style="text-align: center; color: #FF96D5;" target="_blank">
+              <i class="fab fa-beat-fade fa-instagram" style="color: #ffffff; margin-right: 25px"></i><span class="button-text"> Instagram</span>
+            </a>
+        
+            <a href="https://www.tiktok.com/@babykins3000" class="w3-button w3-hover-pink w3-large w3-round-xlarge w3-yellow link" style="text-align: center; color: #FF96D5;" target="_blank">
+              <i class="fab fa-beat-fade fa-tiktok" style="color: #ffffff; margin-right: 25px"></i><span class="button-text"> TikTok</span>
+            </a>
+        
+            <a href="https://twitter.com/babykins3000" class="w3-button w3-hover-pink w3-large w3-round-xlarge w3-yellow link" style="text-align: center; color: #FF96D5;" target="_blank">
+              <i class="fab fa-beat-fade fa-twitter" style="color: #ffffff; margin-right: 25px"></i><span class="button-text"> Twitter/X</span>
+            </a>
+        
+            <a href="https://discord.gg/vyASTyXmFk" class="w3-button w3-hover-pink w3-large w3-round-xlarge w3-yellow link" style="text-align: center; color: #FF96D5;" target="_blank"> 
+              <i class="fab fa-beat-fade fa-discord" style="color: #ffffff; margin-right: 25px"></i><span class="button-text"> Discord</span>
+            </a>
+        
+            <a href="#" class="w3-button w3-hover-pink w3-large w3-round-xlarge w3-yellow link" style="text-align: center; color: #FF96D5;" target="_blank">
+              <i class="fa-solid fa-beat-fade fa-store" style="color: #ffffff; margin-right: 25px"></i><span class="button-text"> Merch coming soon!</span>
+            </a>
+          </div>
+        </div>
+        <script>
+          // Function to change text color
+          function changeColor(element, color) {
+            element.style.color = color;
+          }
+        
+          // Select all elements with the .link class (the entire button)
+          const buttons = document.querySelectorAll('.link');
+        
+          // Attach event listeners to each button
+          buttons.forEach(button => {
+            button.addEventListener('mouseover', function() {
+              // Change the color of the icons and text to black
+              const iconsAndText = this.querySelectorAll('i, .button-text');
+              iconsAndText.forEach(item => changeColor(item, '#000000'));
+            });
+        
+            button.addEventListener('mouseout', function() {
+              // Change the color of the icons back to white
+              const iconsAndText = this.querySelectorAll('i');
+              iconsAndText.forEach(item => changeColor(item, '#FFFFFF'));
+            });
+
+            button.addEventListener('mouseout', function() {
+              // Change the color of the text back to #FF96D5
+              const iconsAndText = this.querySelectorAll('.button-text');
+              iconsAndText.forEach(item => changeColor(item, '#FF96D5'));
+            });
+          });
+        </script>
+        
+          </div>
+      </div>
+
+      <!-- space between Link column and RIP column !-->
+      <div class="container" style="width: 100%; height: 25px">
+        </div>
+
+
+    
+    <div class="container" style="width: 300px; margin-top: 25px; padding-bottom: 35px; height: 150px; border: none; border-radius: 10px; background-color: rgba(0, 0, 0, 0.8);">
+      <h1 style="color: blue; width: 100%; height: 50px; padding-top: 15px; position: relative; animation: bones 500ms infinite; text-align: center"><strong>RIP BONES!</strong></h1>
+      <h2 style="color: white; text-align: center"><strong>Born A Dog</strong></h2>
+      <h2 style="color: white; font-family: sans-serif; text-align: center; line-height: 15px";><strong>Died A Gentleman</strong></h2>
+      </div>
+      
+    <div class="image-container">
+        <img
+        src="./bones.jpg"
+        class="w3-margin"
+        alt="Bones"
+        style="border: 2px groove blue; animation: fontchange 5s; border-radius: 15%; max-width: 200%; height: 300px;"
+    />
+    </div>
+    </div>
+
+    <!--paypal donation link !-->
+    <div class= "container">
+     <div class="links-container">
+              <a href="https://www.paypal.com/donate/?hosted_button_id=FQ74WBGCM3ADS" style="max-width: 100px; font-size: 22px!important" class="w3-button w3-hover-pink w3-large w3-round-xlarge w3-yellow link" target="_blank"> 
+              <i class="fa-brands fa-paypal fa-beat-fade fa-1xs" style="color: #ffffff; margin-right: 10px" onmouseover="this.style.color='#000000';"
+     onmouseout="this.style.color='#ffffff';"></i>Donations>></a>
+        </div>
+      </div>
+
+      <!-- Space between Donations button and About Section, can add txt info !-->
+      <div class="container">
+        <h1 style="color: white; font-size: 22px; padding-top: 10px; text-align: center;"><strong></strong></h1>
+        
+        </div>
+
+    <!-- About Babykins3000 !-->
+    <div class="w3-content w3-padding-32 w3-center" style="padding-right: 10px; padding-left: 10px; max-width: 600px; border: none; border-radius: 8%; background-color: rgba(0, 0, 0, 0.8)">
+      <h3 class="w3-text-white">About Babykins3000</h3>
+      <h5 class="w3-text-white">Article description, 8/26/2023</h5>
+      <p class="w3-text-white">
+        Hi! I'm babykins :)
+
+I am a very expressive and energetic girl who doesn't stop talking! I hope I can bring a smile to your face.
+
+I started playing video games during elementary school and I just haven't stopped since. Been a console gamer my whole life until I switched to PC early 2023.
+
+I was born in Mexico but raised in Texas. I speak both English, Spanish and know some ASL.
+
+I'm super into music, art and anything profound.
+
+Currently going through my Rust phase but i'd consider myself a CoD and DBD veteran player.
+
+If you didn't know, I'm also a lil' artist. I work with charcoal, paint and clay. I eventually want to give away some of my work to show how much I appreciate my supporters. Maybe, i'll open a merch store someday.
+      </p>      
+    </div>
+    <div class="w3-content w3-padding-32 w3-center">
+  <div class="video-container">
+    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/2YllipGl2Is?si=OQA2OB41Ics_-5W2" 
+      title="YouTube video player" frameborder="1" 
+      allow="accelerometer; mute autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen autoplay></iframe>
+  </div>
+</div>
+
+    <footer>
+    <h5 class="w3-text-white" style="color: white;">"Blame it on my momma I'm a thug..."<br>
+      <span class="w3-text-white">- Tupac/Jesus/Babykins3000</span></h5>
+</div>
+    
+<!--This is the pace between the footer quote and the footer Icons-->
+<div class="container" style="width: 100%; display: none;">
+      
+  <!--Footer Icon Links-->
+      <h5 class="w3-text-white" style="color: white; ">
+      </div>
+      <div class="icon-row" style="margin-bottom: 10px;">
+        <a href="https://www.twitch.tv/babykins3000/about" class="icon-link">
+          <i class="fab fa-twitch"></i>
+        </a>
+      
+        <a href="https://www.instagram.com/babykins3000/" class="icon-link"> 
+          <i class="fab fa-instagram"></i>
+        </a>
+      
+        <a href="https://discord.gg/vyASTyXmFk" class="icon-link">
+          <i class="fab fa-discord"></i>
+        </a>
+      
+        <a href="https://www.tiktok.com/@babykins3000" class="icon-link"> 
+          <i class="fab fa-tiktok"></i>
+        </a>
+      
+        <a href="https://twitter.com/babykins3000" class="icon-link">
+          <i class="fab fa-twitter"></i>
+        </a>
+      
+        <a href="https://www.paypal.com/donate/?hosted_button_id=FQ74WBGCM3ADS" class="icon-link">
+          <i class="fab fa-paypal"></i>
+        </a>
+      </div>
+    
+    <a class="icon-link" href="https://www.twitch.tv/Squirrel_Master7/" target="_blank"
+      style="color: white; font-size: 6px; transition: font-size 0.3s, color 0.3s; position: relative; cursor:pointer; text-decoration: none; height: 12px;" 
+        onmouseover="this.style.fontSize='11px'; this.style.color='blue';"
+        onmouseout="this.style.fontSize='6px'; this.style.color='white';">Made by Squirrel_Master
+  </a> 
+  </div>
+    </footer>
+    
+  </body>
+</html>
